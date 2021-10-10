@@ -21,7 +21,6 @@ impl EditorContents {
     }
 }
 
-// why implement this trait?
 impl io::Write for EditorContents {
     fn write(&mut self, buf: &[u8]) -> io::Result<usize> {
         match std::str::from_utf8(buf) {
